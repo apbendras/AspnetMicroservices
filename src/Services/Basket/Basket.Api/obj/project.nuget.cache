@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "O6sTbHPfXRkXcvHze/w/LSvwLNFhPWfVOsOZSCx5b8bbJcAgO0ThuTHAsMtM1XCsBB25S/J50uEarVThFSf9mg==",
+  "dgSpecHash": "TJIU/PE4bWwNCCbANqO5QstvFwjsWHyZxaOkyWvXaLO0FJJKBrborxprojjQlT07UfzABHZYfHE1LnG/x+yAtg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alx\\source\\repos\\AspnetMicroservices\\src\\Services\\Basket\\Basket.Api\\Basket.Api.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\Alx\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\Alx\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Alx\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Alx\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
     "C:\\Users\\Alx\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Alx\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\Alx\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.0\\pipelines.sockets.unofficial.2.2.0.nupkg.sha512",
