@@ -36,6 +36,13 @@ services:
     build:
       context: .
       dockerfile: Services/Discount/Discount.API/Dockerfile
+
+  disscount.test:
+    image: ${DOCKER_REGISTRY-}disscounttest
+    build:
+      context: .
+      dockerfile: Services/Discount/Disscount.Test/Dockerfile
+
 volumes:
   mongo_data:
   portainer_data:

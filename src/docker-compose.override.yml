@@ -27,13 +27,6 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
 
-  rabbitmq:
-    container_name: rabbitmq
-    restart: always
-    ports:
-        - "5672:5672"
-        - "15672:15672"
-
   pgadmin:
     container_name: pgadmin
     environment:
@@ -59,7 +52,6 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - "DatabaseSettings:ConnectionString=mongodb://catalogdb:27017"
-      - "ElasticConfiguration:Uri=http://elasticsearch:9200"
     depends_on:
       - catalogdb
     ports:
@@ -70,12 +62,8 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - "CacheSettings:ConnectionString=basketdb:6379"
-      - "GrpcSettings:DiscountUrl=http://discount.grpc"
-      - "EventBusSettings:HostAddress=amqp://guest:guest@rabbitmq:5672"
-      - "ElasticConfiguration:Uri=http://elasticsearch:9200"
     depends_on:
       - basketdb
-      - rabbitmq
     ports:
       - "8001:80"
 
@@ -89,3 +77,14 @@ services:
       - discountdb
     ports:
       - "8002:80"
+  
+  disscount.test:
+    container_name: discount.test
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "8004:80"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
